@@ -10,13 +10,13 @@ Run the command:
 git clone <SSH_KEY>
 ```
 # Setting up the project
-Once you have downloaded the project, you need to run NPM to download all the required packages the project requires.
+Once you have downloaded the project, you need to run NPM to download all the required packages for the project.
 <br/>
 To do so, go back to the terminal and move to the project directory and run the command:
 ```
 npm i
 ```
-Once the download is complete add a .env file to the root of the directory, this is where we will add the server port and the domains for both the frontend application and backend.
+Once the download is complete add a '.env' file to the root of the directory, this is where we will add the server port and the domains for both the frontend application and backend.
 <br>
 The env variables are called:
 ```
@@ -24,7 +24,7 @@ FRONTEND_URL=
 BACKEND_URL=
 PORT=
 ```
-NOTE: The variables that concern the URLs do not require the forward slash '/' at the end, as these variables are only for CORS Origin Access Be sure that the backend URL port matches the PORT variable.
+NOTE: The variables that concern the URLs do not require the forward slash '/' at the end, as these variables are only for CORS Origin Access. Be sure that the backend URL port matches the PORT variable.
 
 Add the preffered URLs and Port that you want for the application.
 eg.
@@ -40,6 +40,22 @@ This project uses Nodemon to run the local server and the necessary script has a
 npm run devstart
 ```
 Note: This project uses Typescript, so this custom script compiles the project first into the '/dist' folder. Nodemon runs it from there.
+<br/>
+# Routes
+```
+/
+```
+To check if the server running, returns a JSON object containing if the request was a success and the time.
+<br/>
+```
+/time
+```
+To grab the current time in Epoch seconds.
+<br/>
+```
+/metrics
+```
+To grab the metrics of the server.
 <br/>
 # Running tests
 Supertest and Jest are used to test the routes of this project. To simply test the routes run the command:
