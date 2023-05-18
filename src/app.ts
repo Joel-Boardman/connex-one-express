@@ -1,14 +1,16 @@
 const express = require("express");
 const promMid = require("express-prometheus-middleware");
 const cors = require("cors");
+import * as dotenv from "dotenv";
+dotenv.config();
 
 const app = express();
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
 
 const initRouter = require("./routes/init-routes");
 
 const corsOptions = {
-  origin: ["http://localhost:3001", "http://localhost:3000"],
+  origin: [process.env.FRONTEND_URL, process.env.BACKEND_URL],
   optionsSuccessStatus: 200,
 };
 
