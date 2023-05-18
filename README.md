@@ -39,5 +39,10 @@ This project uses Nodemon to run the local server and the necessary script has a
 ```
 npm run devstart
 ```
-
+Note: This project uses Typescript, so this custom script compiles the project first into the '/dist' folder. Nodemon runs it from there.
+<br/>
 # Running tests
+Supertest and Jest are used to test the routes of this project. To simply test the routes run the command:
+```
+npx jest
+```
