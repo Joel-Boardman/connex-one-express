@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "devstart": "tsc && nodemon dist/server.js",
+    "devstart": "tsc && nodemon dist/app.js",
     "test": "jest --detectOpenHandles"
   },
   "keywords": [],
